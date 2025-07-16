@@ -17,16 +17,16 @@ public class AccountRegistrationPage extends BasePage {
 	@FindBy(xpath = "//input[@id='input-lastname']")
 	WebElement txtLastname;
 
-	@FindBy(xpath = "//input[@id='input-lastname']")
+	@FindBy(xpath = "//input[@id='input-email']")
 	WebElement txtEmail;
 
-	@FindBy(xpath = "//input[@id='input-email']")
+	@FindBy(xpath = "//input[@id='input-telephone']")
 	WebElement txtTelephone;
 
 	@FindBy(xpath = "//input[@id='input-password']")
 	WebElement txtPassword;
 
-	@FindBy(xpath = "//input[@id='input-password']")
+	@FindBy(xpath = "//input[@id='input-confirm']")
 	WebElement txtConfirmPassword;
 
 	@FindBy(xpath = "//input[@name='agree']")
@@ -34,7 +34,8 @@ public class AccountRegistrationPage extends BasePage {
 
 	@FindBy(xpath = "//input[@value='Continue']")
 	WebElement btnContinue;
-	
+	@FindBy(xpath = "//h1[normalize-space()='Your Account Has Been Created!']")
+	WebElement msgConfirmation;
 
 	public void setFirstName(String fname) {
 
@@ -66,14 +67,24 @@ public class AccountRegistrationPage extends BasePage {
 		txtConfirmPassword.sendKeys(ConfirmPassword);
 	}
 
-	public void setPrivacyPolicy(String chkPolicy) {
+	public void setPrivacyPolicy() {
 
-		txtPassword.sendKeys(chkPolicy);
+		chkPolicy.click();
 	}
 
-	public void ClickContinue(String chkPolicy) {
+	public void ClickContinue() {
 
 		btnContinue.click();
+	}
+
+	public String getConfirmationMsg() {
+
+		try {
+			return (msgConfirmation.getText());
+		} catch (Exception e) {
+			return (e.getMessage());
+		}
+
 	}
 
 }
