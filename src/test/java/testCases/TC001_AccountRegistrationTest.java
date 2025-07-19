@@ -1,47 +1,72 @@
 package testCases;
 
-import org.testng.Assert;
+import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
 import pageObjects.AccountRegistrationPage;
 import pageObjects.HomePage;
 import testBase.BaseClass;
 
-
 public class TC001_AccountRegistrationTest extends BaseClass {
-
-
 
 	@Test
 
 	public void verify_account_registration() {
 
-		HomePage hp = new HomePage(driver);
+		try {
 
-		hp.clickMyAccount();
-		hp.clickRegister();
+			logger.info("***** starting TC001_AccountRegistrationtest   *****");
 
-		AccountRegistrationPage regpage = new AccountRegistrationPage(driver);
+			HomePage hp = new HomePage(driver);
 
-		regpage.setFirstName(randomStrings1().toUpperCase());
+			logger.info("***** clicked on my account link ******");
+			hp.clickMyAccount();
 
-		regpage.setLastName(randomStrings1().toUpperCase());
+			logger.info("**** clicked on register aplication ******");
+			hp.clickRegister();
 
-		regpage.setEmail(randomStrings1() + "@gmail.com");
-		regpage.setTelephone(randomNumber());
+			logger.info("providing customer details......************");
+			AccountRegistrationPage regpage = new AccountRegistrationPage(driver);
 
-		String password = alphanumeric();
-		regpage.setPassword(password);
-		regpage.setConfirmPassword(password);
-		regpage.setPrivacyPolicy();
-		regpage.ClickContinue();
+			regpage.setFirstName(randomStrings1().toUpperCase());
 
-		String confirmationMsg = regpage.getConfirmationMsg();
+			regpage.setLastName(randomStrings1().toUpperCase());
 
-		Assert.assertEquals(confirmationMsg, "Your Account Has Been Created!");
+			regpage.setEmail(randomStrings1() + "@gmail.com");
+			regpage.setTelephone(randomNumber());
 
+			String password = alphanumeric();
+			regpage.setPassword(password);
+			regpage.setConfirmPassword(password);
+			regpage.setPrivacyPolicy();
+			regpage.ClickContinue();
+
+			logger.info("validating expected message");
+			String confirmationMsg = regpage.getConfirmationMsg();
+
+			if (confirmationMsg.equals("Your Account Has Been Created!")) {
+
+				AssertJUnit.assertTrue(true);
+			} else {
+				logger.error("Test Failed");
+
+				logger.debug("debug logs");
+
+				AssertJUnit.assertTrue(false);
+				
+				logger.info("test failed");
+
+			}
+		}
+
+		// Assert.assertEquals(confirmationMsg, "Your Account Has Been Created!");}
+
+		catch (Exception e) {
+
+			AssertJUnit.fail();
+		}
+
+		logger.info("*******Finished TC001_AccountRegistrationtest   *****");
 	}
-
-	
 
 }

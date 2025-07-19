@@ -19,12 +19,11 @@
         <RollingFile name="RollingFile"
                      fileName="${basepath}/automation.log"
                      filePattern="${basepath}/automation-%d{yyyy-MM-dd}.log">
-            <PatternLayout pattern="${log.pattern}"/>
-            <Policies>
-                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
-                <SizeBasedTriggeringPolicy size="10MB"/>
-            </Policies>
-            <DefaultRolloverStrategy max="7"/>
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} -%msg%n"/>
+         
+             
+                <SizeBasedTriggeringPolicy size="50000"/>
+      
         </RollingFile>
 
     </Appenders>
@@ -34,8 +33,8 @@
 
         <!-- Root Logger -->
         <Root level="debug">
-            <!--<AppenderRef ref="RollingFile"/>-->
-            <AppenderRef ref="Console"/>
+            <AppenderRef ref="RollingFile"/>
+            <!--<AppenderRef ref="Console"/>-->
         </Root>
 
     </Loggers>
