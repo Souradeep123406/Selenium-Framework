@@ -1,5 +1,8 @@
 package testCases;
 
+import org.testng.annotations.Test;
+import org.testng.Assert;
+import org.testng.AssertJUnit;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
@@ -63,7 +66,7 @@ public class TC001_AccountRegistrationTest extends BaseClass {
 
 		catch (Exception e) {
 
-			AssertJUnit.fail();
+			Assert.fail();
 		}
 
 		logger.info("*******Finished TC001_AccountRegistrationtest   *****");

@@ -1,5 +1,6 @@
 package testBase;
 
+import org.testng.annotations.AfterMethod;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
@@ -55,6 +56,7 @@ public class BaseClass {
 	}
 
 
+	@AfterMethod
 	@AfterClass
 	public void tearDown() {
 

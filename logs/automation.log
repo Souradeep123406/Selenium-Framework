@@ -351,3 +351,42 @@
 00:43:08.876 [main] INFO  testCases.TC001_AccountRegistrationTest -providing customer details......************
 00:43:12.227 [main] INFO  testCases.TC001_AccountRegistrationTest -validating expected message
 00:43:12.305 [main] INFO  testCases.TC001_AccountRegistrationTest -*******Finished TC001_AccountRegistrationtest   *****
+21:28:57.177 [main] DEBUG org.testng.TestNG -suiteXmlPath: "/Users/EclipseProject/OpenCartv123/testng.xml"
+21:28:57.574 [main] INFO  org.testng.internal.Utils -[TestNG] Running:
+  /Users/EclipseProject/OpenCartv123/testng.xml
+
+21:29:11.066 [main] INFO  testCases.TC002_loginTest -*********** starting TC002_LOGIN TEST *********
+21:48:32.754 [main] DEBUG org.testng.TestNG -suiteXmlPath: "/Users/EclipseProject/OpenCartv123/testng.xml"
+21:48:33.146 [main] INFO  org.testng.internal.Utils -[TestNG] Running:
+  /Users/EclipseProject/OpenCartv123/testng.xml
+
+21:48:44.660 [main] INFO  testCases.TC002_loginTest -*********** starting TC002_LOGIN TEST *********
+21:48:49.032 [main] INFO  testCases.TC002_loginTest -******** finidhed  TC002_LOGIN TEST  ****
+21:52:06.045 [main] DEBUG org.testng.TestNG -suiteXmlPath: "/Users/EclipseProject/OpenCartv123/master.xml"
+21:52:06.145 [main] INFO  org.testng.internal.Utils -[XmlSuite] [WARN] 'parallel' value 'true' is no longer valid, defaulting to 'methods'.
+21:52:06.502 [main] INFO  org.testng.internal.Utils -[TestNG] Running:
+  /Users/EclipseProject/OpenCartv123/master.xml
+
+21:52:17.949 [TestNG-test-Test1-1] INFO  testCases.TC002_loginTest -*********** starting TC002_LOGIN TEST *********
+21:52:21.876 [TestNG-test-Test1-1] INFO  testCases.TC002_loginTest -******** finidhed  TC002_LOGIN TEST  ****
+21:52:29.464 [main] INFO  testCases.TC002_loginTest -*********** starting TC002_LOGIN TEST *********
+21:52:30.851 [main] INFO  testCases.TC002_loginTest -******** finidhed  TC002_LOGIN TEST  ****
+21:56:16.723 [main] DEBUG org.testng.TestNG -suiteXmlPath: "/Users/EclipseProject/OpenCartv123/master.xml"
+21:56:16.815 [main] INFO  org.testng.internal.Utils -[XmlSuite] [WARN] 'parallel' value 'true' is no longer valid, defaulting to 'methods'.
+21:56:17.166 [main] INFO  org.testng.internal.Utils -[TestNG] Running:
+  /Users/EclipseProject/OpenCartv123/master.xml
+
+21:56:28.968 [TestNG-test-Test1-1] INFO  testCases.TC002_loginTest -*********** starting TC002_LOGIN TEST *********
+21:56:33.182 [TestNG-test-Test1-1] INFO  testCases.TC002_loginTest -******** finidhed  TC002_LOGIN TEST  ****
+21:56:39.664 [main] INFO  testCases.TC002_loginTest -*********** starting TC002_LOGIN TEST *********
+21:56:41.130 [main] INFO  testCases.TC002_loginTest -******** finidhed  TC002_LOGIN TEST  ****
+21:57:49.046 [main] DEBUG org.testng.TestNG -suiteXmlPath: "/Users/EclipseProject/OpenCartv123/master.xml"
+21:57:49.143 [main] INFO  org.testng.internal.Utils -[XmlSuite] [WARN] 'parallel' value 'true' is no longer valid, defaulting to 'methods'.
+21:57:49.584 [main] INFO  org.testng.internal.Utils -[TestNG] Running:
+  /Users/EclipseProject/OpenCartv123/master.xml
+
+21:58:01.660 [TestNG-test-Test1-1] INFO  testCases.TC002_loginTest -*********** starting TC002_LOGIN TEST *********
+21:58:06.070 [TestNG-test-Test1-1] INFO  testCases.TC002_loginTest -******** finidhed  TC002_LOGIN TEST  ****
+21:58:11.891 [TestNG-test-Test2-1] INFO  testCases.TC002_loginTest -*********** starting TC002_LOGIN TEST *********
+21:58:13.395 [TestNG-test-Test2-1] INFO  testCases.TC002_loginTest -******** finidhed  TC002_LOGIN TEST  ****
+21:58:17.925 [TestNG-test-Test3-1] INFO  testCases.TC002_loginTest -*********** starting TC002_LOGIN TEST *********
