@@ -390,3 +390,9 @@
 21:58:11.891 [TestNG-test-Test2-1] INFO  testCases.TC002_loginTest -*********** starting TC002_LOGIN TEST *********
 21:58:13.395 [TestNG-test-Test2-1] INFO  testCases.TC002_loginTest -******** finidhed  TC002_LOGIN TEST  ****
 21:58:17.925 [TestNG-test-Test3-1] INFO  testCases.TC002_loginTest -*********** starting TC002_LOGIN TEST *********
+11:27:31.276 [main] DEBUG org.testng.TestNG -suiteXmlPath: "C:\Users\souradeep.saha\EclipseProject\Selenium-Framework\testng.xml"
+11:27:31.601 [main] INFO  org.testng.internal.Utils -[TestNG] Running:
+  C:\Users\souradeep.saha\EclipseProject\Selenium-Framework\testng.xml
+
+11:28:09.250 [main] INFO  testCases.TC002_loginTest -*********** starting TC002_LOGIN TEST *********
+11:28:16.787 [main] INFO  testCases.TC002_loginTest -******** finidhed  TC002_LOGIN TEST  ****
