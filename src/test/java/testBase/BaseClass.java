@@ -1,6 +1,5 @@
 package testBase;
 
-import org.testng.annotations.AfterMethod;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
@@ -9,7 +8,7 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 import org.apache.commons.text.RandomStringGenerator;
-import org.apache.logging.log4j.LogManager;  //log4j
+import org.apache.logging.log4j.LogManager; //log4j
 import org.apache.logging.log4j.Logger;//log4j
 //import org.apache.logging.log4j.core.Logger;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +18,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
+
 public class BaseClass {
 
 	public WebDriver driver;
@@ -26,37 +26,40 @@ public class BaseClass {
 	public Properties p;
 
 	@BeforeClass
-	@Parameters({"os","browser"})
-	
-	public void setup(String os,String browser) throws IOException {
-		
-		FileInputStream file= new FileInputStream(System.getProperty("user.dir")+"//src//test//resources//config.properties");
-		
-		p=new Properties();
+	@Parameters({ "os", "browser" })
+
+	public void setup(String os, String browser) throws IOException {
+
+		FileInputStream file = new FileInputStream(
+				System.getProperty("user.dir") + "//src//test//resources//config.properties");
+
+		p = new Properties();
 		p.load(file);
-		
+
 		switch (browser.toLowerCase()) {
-		case "chrome":driver=new ChromeDriver();break;
-		case "safari":driver=new SafariDriver();break;
-		case "firefox":driver=new FirefoxDriver();break;
-			
-		
+		case "chrome":
+			driver = new ChromeDriver();
+			break;
+		case "safari":
+			driver = new SafariDriver();
+			break;
+		case "firefox":
+			driver = new FirefoxDriver();
+			break;
 
-		default:return;
-			
+		default:
+			return;
+
 		}
-		
-		logger=LogManager.getLogger(this.getClass());
 
+		logger = LogManager.getLogger(this.getClass());
 
-
+		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.get(p.getProperty("appURL1")); //reading url from property file
+		driver.get(p.getProperty("appURL1")); // reading url from property file
 	}
 
-
-	@AfterMethod
 	@AfterClass
 	public void tearDown() {
 

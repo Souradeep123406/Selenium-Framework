@@ -10,7 +10,7 @@ public class DataProviders {
 	@DataProvider(name="LoginData")
 	public String [][] getData() throws IOException {
 		
-		String path=".\\src\\test\\java\\testData\\Opencart_LoginData.xlsx"; 
+		String path=".\\testData\\Opencart_LoginData.xlsx"; 
 		
 		ExcelUtility xlutil=new ExcelUtility(path);
 		
@@ -21,7 +21,7 @@ public class DataProviders {
 		
 		for(int i=1;i<=totalrows;i++) {
 			
-			for(int j=0;j<=totalcols;j++) {
+			for(int j=0;j<totalcols;j++) {
 				
 				LoginData[i-1][j]=xlutil.getcellData("Sheet1", i, j);
 			}
