@@ -66,7 +66,7 @@ public class ExcelUtility {
 
 		String data;
 
-		try {
+		try {                                                 //adding try block
 
 			data = formatter.formatCellValue(cell);
 
